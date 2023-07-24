@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://program09.github.io/YORDIALCANTARA/public/css/Icons/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cont_login">
+            <form action="">
+                <div class="img_logo">
+                    <i class="fa-thin fa-graduation-cap"></i>
+                </div>
+                <div class="form_input">
+                    <p><i class="fa-light fa-envelope"></i>Correo electrónico</p>
+                    <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com" autocomplete="off">
+                </div>
+                <div class="form_input">
+                    <p><i class="fa-light fa-lock-keyhole"></i>Contraseña</p>
+                    <input type="password" id="password" name="password" placeholder="············" autocomplete="off">
+                </div>
+                <div class="select_pass">
+                    <input type="checkbox" id="mostrar">
+                    <label for="mostrar" id="mostrar-label"><i class="fa-light fa-eye"></i> Mostrar contraseña</label>
+                </div>
+                <button type="submit" class="btn_send">Entrar</button>
+
+                <div class="log_footer">
+                    <a href="">¿Olvidaste tu contraseña?</a><a href="">Power by Yordi A.P</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var passwordInput = document.getElementById("password");
+            var mostrarCheckbox = document.getElementById("mostrar");
+            var mostrarLabel = document.getElementById("mostrar-label");
+
+            mostrarCheckbox.addEventListener("change", function () {
+                if (mostrarCheckbox.checked) {
+                    passwordInput.setAttribute("type", "text");
+                    mostrarLabel.innerHTML = "<i class='fa-light fa-eye-slash'></i> Ocultar contraseña"; // Change label text when checked
+                } else {
+                    passwordInput.setAttribute("type", "password");
+                    mostrarLabel.innerHTML = "<i class='fa-light fa-eye'></i>Mostrar contraseña"; // Change label text when unchecked
+                }
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
